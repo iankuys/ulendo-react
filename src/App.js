@@ -26,7 +26,6 @@ const [cards, addCards] = useState([]);
 
     // will not add card if no new requests were made
     if (JSON.stringify(cards[cards.length - 1]) !== JSON.stringify(result) && result["DATA"] !== null) {
-      console.log(JSON.stringify(cards[cards.length - 1]) !== JSON.stringify(result))
       addCards((prevCard) => [...prevCard, result]); // add new card 
     } else if (result["DATA"] === null && cards.length === 0) {
       addCards([]);
@@ -35,7 +34,6 @@ const [cards, addCards] = useState([]);
   }
 
   useEffect(() => {
-    console.log("hello")
     fetchData();
   }, [])
 
