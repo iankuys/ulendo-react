@@ -10,7 +10,7 @@ const [cards, addCards] = useState([]);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    var endpoint = "https://xon5mr6rjg.execute-api.us-west-1.amazonaws.com/test/analysis";
+    var endpoint = "https://pvxz88zfqg.execute-api.us-west-1.amazonaws.com/test/analysis";
 
     var requestOptions = {
         method: 'GET',
@@ -36,7 +36,6 @@ const [cards, addCards] = useState([]);
   useEffect(() => {
     fetchData();
   }, [])
-
 
   return (
     <>
